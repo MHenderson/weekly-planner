@@ -1,16 +1,16 @@
 \newcommand{\hourly}[1]{
 
-    & & & && \multirow{2}{*}{#1}\\ 
+    & & & & \multirow{2}{*}{#1}\\ 
     \grayline
-    & :30 & & &&\\ \hline
+    & & & &\\ \hline
 
 }
 
 \newcommand{\daily}[1]{
-\begin{tabularx}{\linewidth}{|c|c|X|X|X|c}
+\begin{tabularx}{\linewidth}{|c|c|X|X|c}
 
-    \cline{1-5}
-    \multicolumn{5} {|l|} {#1} \\
+    \cline{1-4}
+    \multicolumn{4} {|l|} {#1} \\
     \hline
 
     \hourly{6}
