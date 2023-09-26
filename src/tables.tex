@@ -1,4 +1,4 @@
-\newcommand{\hourly}[1]{
+\newcommand{\hourlyplan}[1]{
 
     & & & & \multirow{2}{*}{#1}\\ 
     \grayline
@@ -6,28 +6,108 @@
 
 }
 
-\newcommand{\daily}[1]{
+\newcommand{\hourlytrack}[1]{
+
+    & & & & \multirow{2}{*}{#1}\\ 
+    \grayline
+    & & & &\\ \hline
+
+}
+
+\newcommand{\dailyplan}[1]{
 \begin{tabularx}{\linewidth}{|c|c|X|X|c}
 
     \cline{1-4}
     \multicolumn{4} {|l|} {#1} \\
     \hline
 
-    \hourly{6}
-    \hourly{7}
-    \hourly{8}
-    \hourly{9}
-    \hourly{10}
-    \hourly{11}
-    \hourly{12}
-    \hourly{13}
-    \hourly{14}
-    \hourly{15}
-    \hourly{16}
-    \hourly{17}
-    \hourly{18}
-    \hourly{19}
-    \hourly{20}
+    \hourlyplan{6}
+    \hourlyplan{7}
+    \hourlyplan{8}
+    \hourlyplan{9}
+    \hourlyplan{10}
+    \hourlyplan{11}
+    \hourlyplan{12}
+    \hourlyplan{13}
+    \hourlyplan{14}
+    \hourlyplan{15}
+    \hourlyplan{16}
+    \hourlyplan{17}
+    \hourlyplan{18}
+    \hourlyplan{19}
+    \hourlyplan{20}
 
 \end{tabularx}
+}
+
+\newcommand{\amplantrack}[1]{
+  \noindent
+  \begin{tabularx}{\linewidth}{|c|c|X|X|c}
+
+      \cline{1-4}
+      \multicolumn{4} {|l|} {#1 - AM Plan} \\
+      \hline
+
+      \hourlyplan{6}
+      \hourlyplan{7}
+      \hourlyplan{8}
+      \hourlyplan{9}
+      \hourlyplan{10}
+      \hourlyplan{11}
+      \hourlyplan{12}
+
+  \end{tabularx}
+
+  \noindent
+  \begin{tabularx}{\linewidth}{|c|c|X|X|c}
+
+      \cline{1-4}
+      \multicolumn{4} {|l|} {#1 - AM Tracking} \\
+      \hline
+
+      \hourlytrack{6}
+      \hourlytrack{7}
+      \hourlytrack{8}
+      \hourlytrack{9}
+      \hourlytrack{10}
+      \hourlytrack{11}
+      \hourlytrack{12}
+
+  \end{tabularx}
+}
+
+\newcommand{\pmplantrack}[1]{
+  \noindent
+  \begin{tabularx}{\linewidth}{|c|c|X|X|c}
+
+      \cline{1-4}
+      \multicolumn{4} {|l|} {#1 - PM Plan} \\
+      \hline
+
+      \hourlyplan{13}
+      \hourlyplan{14}
+      \hourlyplan{15}
+      \hourlyplan{16}
+      \hourlyplan{17}
+      \hourlyplan{18}
+      \hourlyplan{19}
+
+  \end{tabularx}
+
+  \noindent
+  \begin{tabularx}{\linewidth}{|c|c|X|X|c}
+
+      \cline{1-4}
+      \multicolumn{4} {|l|} {#1 - PM Tracking} \\
+      \hline
+
+      \hourlytrack{13}
+      \hourlytrack{14}
+      \hourlytrack{15}
+      \hourlytrack{16}
+      \hourlytrack{17}
+      \hourlytrack{18}
+      \hourlytrack{19}
+
+  \end{tabularx}
 }
