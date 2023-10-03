@@ -21,6 +21,7 @@
 \urlstyle{same}
 
 \usepackage{babel}
+\usepackage{calc}
 \usepackage[useregional, showdow]{datetime2}
 \usepackage{geometry}
 \usepackage{multirow}
@@ -28,7 +29,24 @@
 \usepackage[table, svgnames]{xcolor}
 \newcommand{\grayline}{\arrayrulecolor{lightgray}\cline{1-5}\arrayrulecolor{black}}
 
-\title{Week 40, 2023}
+\def\weeknum{40}
+\def\year{2023}
+\def\month{10}
+\def\startdom{2}
+
+\newcounter{dom}
+\setcounter{dom}{\startdom}
+\newcounter{dow}
+\setcounter{dow}{0}
+
+\newcommand{\dayplan}{
+  \amplantrack{\DTMdisplaydate{\year}{\month}{\thedom}{\thedow}}
+  \newpage
+  \pmplantrack{\DTMdisplaydate{\year}{\month}{\thedom}{\thedow}}
+  \newpage
+}
+
+\title{Week \weeknum, \year}
 \author{}
 \date{}
 
@@ -39,39 +57,30 @@
 \maketitle
 \mainmatter
 
-\amplantrack{\DTMdisplaydate{2023}{10}{2}{0}}
-\newpage
-\pmplantrack{\DTMdisplaydate{2023}{10}{2}{0}}
-\newpage
+\dayplan
+\addtocounter{dom}{1}
+\addtocounter{dow}{1}
 
-\amplantrack{\DTMdisplaydate{2023}{10}{3}{1}}
-\newpage
-\pmplantrack{\DTMdisplaydate{2023}{10}{3}{1}}
-\newpage
+\dayplan
+\addtocounter{dom}{1}
+\addtocounter{dow}{1}
 
-\amplantrack{\DTMdisplaydate{2023}{10}{4}{2}}
-\newpage
-\pmplantrack{\DTMdisplaydate{2023}{10}{4}{2}}
-\newpage
+\dayplan
+\addtocounter{dom}{1}
+\addtocounter{dow}{1}
 
-\amplantrack{\DTMdisplaydate{2023}{10}{5}{3}}
-\newpage
-\pmplantrack{\DTMdisplaydate{2023}{10}{5}{3}}
-\newpage
+\dayplan
+\addtocounter{dom}{1}
+\addtocounter{dow}{1}
 
-\amplantrack{\DTMdisplaydate{2023}{10}{6}{4}}
-\newpage
-\pmplantrack{\DTMdisplaydate{2023}{10}{6}{4}}
-\newpage
+\dayplan
+\addtocounter{dom}{1}
+\addtocounter{dow}{1}
 
-\amplantrack{\DTMdisplaydate{2023}{10}{7}{5}}
-\newpage
-\pmplantrack{\DTMdisplaydate{2023}{10}{7}{5}}
-\newpage
+\dayplan
+\addtocounter{dom}{1}
 
-\amplantrack{\DTMdisplaydate{2023}{10}{8}{6}}
-\newpage
-\pmplantrack{\DTMdisplaydate{2023}{10}{8}{6}}
+\dayplan
 
 \backmatter
 \end{document}
