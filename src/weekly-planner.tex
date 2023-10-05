@@ -39,6 +39,11 @@
 \newcounter{dow}
 \setcounter{dow}{0}
 
+\newcommand{\nextday}{
+  \addtocounter{dom}{1}
+  \addtocounter{dow}{1}
+}
+
 \newcommand{\dayplan}{
   \amplantrack{\DTMdisplaydate{\year}{\month}{\thedom}{\thedow}}
   \newpage
@@ -58,29 +63,25 @@
 \mainmatter
 
 \dayplan
-\addtocounter{dom}{1}
-\addtocounter{dow}{1}
+\nextday
 
 \dayplan
-\addtocounter{dom}{1}
-\addtocounter{dow}{1}
+\nextday
 
 \dayplan
-\addtocounter{dom}{1}
-\addtocounter{dow}{1}
+\nextday
 
 \dayplan
-\addtocounter{dom}{1}
-\addtocounter{dow}{1}
+\nextday
 
 \dayplan
-\addtocounter{dom}{1}
-\addtocounter{dow}{1}
+\nextday
 
 \dayplan
-\addtocounter{dom}{1}
+\nextday
 
 \dayplan
+\nextday
 
 \backmatter
 \end{document}
